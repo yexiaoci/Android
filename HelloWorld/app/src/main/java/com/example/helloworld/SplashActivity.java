@@ -34,8 +34,9 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this,RegisterActivity.class);
                 startActivity(intent);
+                SplashActivity.this.finish();
             }
         };
         timer.schedule(task,5000);
