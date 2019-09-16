@@ -1,13 +1,11 @@
-package com.example.helloworld;
+package com.example.helloworld.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -18,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
+import com.example.helloworld.R;
 import com.example.helloworld.utils.MD5Utils;
 
 public class LoginActivity extends AppCompatActivity {

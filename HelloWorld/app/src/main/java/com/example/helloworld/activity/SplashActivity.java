@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.helloworld.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -6,6 +6,8 @@ import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.helloworld.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

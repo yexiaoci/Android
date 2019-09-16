@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.helloworld.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.helloworld.R;
 import com.example.helloworld.utils.MD5Utils;
 
 public class RegisterActivity extends AppCompatActivity implements View .OnClickListener{

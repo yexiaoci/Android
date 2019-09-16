@@ -1,4 +1,4 @@
-package com.example.helloworld;
+package com.example.helloworld.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.helloworld.R;
+import com.example.helloworld.activity.LoginActivity;
+import com.example.helloworld.activity.SettingActivity;
 
 
 public class MyInfoFragment extends Fragment {
