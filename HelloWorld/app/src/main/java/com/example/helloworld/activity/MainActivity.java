@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         // 1. 创建fragment的列表
         fragments = new SparseArray<>();
         fragments.put(R.id.btn_my, MyInfoFragment.newInstance());
+        fragments.put(R.id.btn_execise, ExerciseFragment.newInstance("Activity向Fragment传值"));
         // 2. 加载默认的Fragment
         replaceFragment(fragments.get(R.id.btn_my));
     }
@@ -58,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction ft = manager.beginTransaction();
         ft.replace(R.id.main_body, fragment);
+        ft.addToBackStack(null);
+        ft.addToBackStack(null);
         ft.commit();
     }
 
@@ -99,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 Toast.makeText(MainActivity.this, titles.get(checkedId), Toast.LENGTH_SHORT).show();
                 setToolbar(checkedId);
+                replaceFragment(fragments.get(checkedId));
             }
         });
     }
