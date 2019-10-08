@@ -3,14 +3,17 @@ package com.example.helloworld.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.helloworld.R;
+import com.example.helloworld.activity.ExerciseDetailActivity;
+import com.example.helloworld.adapter.RecyclerViewAdapter;
+import com.example.helloworld.entity.Exercise;
+import com.example.helloworld.utils.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,11 +21,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.niit.android.course.R;
-import edu.niit.android.course.activity.ExerciseDetailActivity;
-import edu.niit.android.course.adapter.RecyclerViewAdapter;
-import edu.niit.android.course.entity.Exercise;
-import edu.niit.android.course.utils.IOUtils;
 
 public class RecyclerViewFragment extends Fragment {
     private List<Exercise> exercises;
@@ -138,37 +136,33 @@ public class RecyclerViewFragment extends Fragment {
                 case 8:
                     exercise.setTitle("第9章 网络编程");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_4);
                     break;
                 case 9:
                     exercise.setTitle("第10章 服务");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_5);
+
                     break;
                 case 10:
                     exercise.setTitle("第11章 基于位置的服务");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_1);
+
                     break;
                 case 11:
                     exercise.setTitle("第12章 Material Design实战");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_2);
+
                     break;
                 case 12:
                     exercise.setTitle("第13章 高级技巧");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_3);
                     break;
                 case 13:
                     exercise.setTitle("第14章 开发天气App");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_4);
                     break;
                 case 14:
                     exercise.setTitle("第15章 项目发布上线");
                     exercise.setSubTitle("共计5题");
-                    exercise.setBackground(R.mipmap.ic_exercise_bg_5);
                     break;
                 default:
                     break;

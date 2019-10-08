@@ -47,8 +47,10 @@ public class MainActivity extends AppCompatActivity {
         fragments = new SparseArray<>();
         fragments.put(R.id.btn_my, MyInfoFragment.newInstance());
         fragments.put(R.id.btn_execise, ExerciseFragment.newInstance("Activity向Fragment传值"));
+        fragments.put(R.id.btn_course, AdBannerFragment.newInstance());
         // 2. 加载默认的Fragment
         replaceFragment(fragments.get(R.id.btn_my));
+        replaceFragment(fragments.get(R.id.btn_execise));
     }
 
     /**
