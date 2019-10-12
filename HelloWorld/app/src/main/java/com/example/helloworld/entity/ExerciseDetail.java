@@ -1,14 +1,19 @@
 package com.example.helloworld.entity;
 
-public class ExerciseDetail {
-    private int exercise_id;// 练习Id， 暂时没使用
-    private String subject;
-    private String a;
-    private String b;
-    private String c;
-    private String d;
-    private int answer;
+import java.io.Serializable;
 
+/**
+ * 每章的每道习题的信息
+ */
+public class ExerciseDetail implements Serializable {
+    private int exercise_id;// 练习Id， 暂时没使用
+    private int subjectId;  // 习题id
+    private String subject; // 题干
+    private String a;       // 选项A
+    private String b;       // 选项B
+    private String c;       // 选项C
+    private String d;       // 选项D
+    private int answer;     // 正确答案
     /**
      * 0：选择正确，
      * 1：选中的A选项是错的
