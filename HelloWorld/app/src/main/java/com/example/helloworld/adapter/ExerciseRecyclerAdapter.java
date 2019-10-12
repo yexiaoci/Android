@@ -14,10 +14,10 @@ import com.example.helloworld.entity.Exercise;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class ExerciseRecyclerAdapter extends RecyclerView.Adapter<ExerciseRecyclerAdapter.ViewHolder> {
     private List<Exercise> exercises;
 
-    public RecyclerViewAdapter(List<Exercise> exercises) {
+    public ExerciseRecyclerAdapter(List<Exercise> exercises) {
         this.exercises = exercises;
     }
 

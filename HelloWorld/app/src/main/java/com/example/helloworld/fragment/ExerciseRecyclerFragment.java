@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.helloworld.R;
 import com.example.helloworld.activity.ExerciseDetailActivity;
-import com.example.helloworld.adapter.RecyclerViewAdapter;
+import com.example.helloworld.adapter.ExerciseRecyclerAdapter;
 import com.example.helloworld.entity.Exercise;
 import com.example.helloworld.utils.IOUtils;
 
@@ -22,15 +22,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class RecyclerViewFragment extends Fragment {
+public class ExerciseRecyclerFragment extends Fragment {
     private List<Exercise> exercises;
 
-    public RecyclerViewFragment() {
+    public ExerciseRecyclerFragment() {
         // Required empty public constructor
     }
 
-    public static RecyclerViewFragment newInstance(String param) {
-        RecyclerViewFragment fragment = new RecyclerViewFragment();
+    public static ExerciseRecyclerFragment newInstance(String param) {
+        ExerciseRecyclerFragment fragment = new ExerciseRecyclerFragment();
         Bundle bundle = new Bundle();
         bundle.putString("param", param);
         fragment.setArguments(bundle);
@@ -52,12 +52,12 @@ public class RecyclerViewFragment extends Fragment {
         recyclerView.addItemDecoration(new DividerItemDecoration(container.getContext(),
                 DividerItemDecoration.VERTICAL));
         // 4. 创建适配器
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(exercises);
+        ExerciseRecyclerAdapter adapter = new ExerciseRecyclerAdapter(exercises);
         // 5. 设置适配器
         recyclerView.setAdapter(adapter);
 
         // 6. 设置监听器
-        adapter.setOnItemClickListener(new RecyclerViewAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new ExerciseRecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 Exercise exercise = exercises.get(position);
