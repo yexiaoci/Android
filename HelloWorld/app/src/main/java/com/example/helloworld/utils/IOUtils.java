@@ -47,7 +47,7 @@ public class IOUtils {
         XmlPullParser parser = Xml.newPullParser();
         // 2. 设置输入源
         parser.setInput(is, StandardCharsets.UTF_8.toString());
-        // 3. 根据EventType类型，判断节点名称，解析数据，将输入放入集合
+        // 3. 根据EventType类型，判断节点名称，将输入放入集合
         int eventType = parser.getEventType();
         while(eventType != XmlPullParser.END_DOCUMENT) {
             String nodeName = parser.getName();

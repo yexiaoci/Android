@@ -1,7 +1,13 @@
 package com.example.helloworld.activity;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.example.helloworld.R;
 import com.example.helloworld.adapter.ExerciseDetailAdapter;
@@ -199,4 +205,37 @@ public class ExerciseDetailActivity extends AppCompatActivity
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.exercise_detail, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        String msg = "本次练习得分：" + score * 20;
+        switch(score) {
+            case 0:
+                msg += "，一题都没做对，加油";
+                break;
+            case 1:
+            case 2:
+                msg += "，没及格，继续努力";
+                break;
+            case 3:
+                msg += "，刚及格，继续努力";
+                break;
+            case 4:
+                msg += "，还不错，不要骄傲哦";
+                break;
+            case 5:
+                msg += "，全做对，太棒了！";
+                break;
+        }
+        new AlertDialog.Builder(this).setTitle("得分")
+                .setMessage(msg)
+                .setPositiveButton("确定", null)
+                .show();
+        return true;
+    }
 }
